@@ -43,7 +43,7 @@ To run a specific suite (.spec)
 
 and hit return/enter
 
-a. <name of specfile> is the name of the file you are running, for example globalNav.spec
+a. [name of specfile] is the name of the file you are running, for example globalNav.spec
 
 b. url is the url to run against
 
@@ -59,7 +59,7 @@ To run a test suite
 	
 and hit return/enter
 
-a. <name of testfile> is the name of your test suite, for exmaple globalNav.test
+a. [name of testfile] is the name of your test suite, for exmaple globalNav.test
 
 b. htmlreport is userdefined meaning you can set it to whatever and it will create that folder, 
    leave it blank and it will generate reports in your main project folder.
