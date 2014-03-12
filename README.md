@@ -32,6 +32,7 @@ run this command:
 To run a specific suite (.spec)
 1. Open terminal and cd to where your project is (for me it's /Users/<username>/Documents/workspace/<name of project>    
 2. Run this command: 
+
 		galen check <name of specfile> \
 		--url http://apple.com \
 		--size 1024x900 \
