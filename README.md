@@ -28,7 +28,8 @@ To install galen framework:
 2. You'll need to add the galen binary to your PATH. To do this is the same as above. Open terminal and cd to where you unzipped galen.
 run this command: 
 
-		mv galen /usr/bin and enter your password when prompted.
+		mv galen /usr/bin
+		enter your password when prompted.
 	
 	
 To run a specific suite (.spec)
@@ -59,10 +60,9 @@ To run a test suite
 	
 and hit return/enter
 
-a. [name of testfile] is the name of your test suite, for exmaple globalNav.test
+a. [name of testfile] is the name of your test suite, for example globalNav.test
 
-b. htmlreport is userdefined meaning you can set it to whatever and it will create that folder, 
-   leave it blank and it will generate reports in your main project folder.
+b. Here htmlreport must be defined (I use "reports")
 		   
 
 Running in Selenium grid
@@ -70,10 +70,10 @@ Running in Selenium grid
 To support more browsers and coverage, you can run Galen in Selenium Grid. If you have already downloaded and installed the full selenium stack
 just open terminal and cd to where this is unzipped.
 
-1. Start the hub; Run command: 
+1. Start the hub by running command: 
 
    		java -jar selenium-server-standalone-2.40.0.jar -role hub 
-2. Register the node for use; Open another terminal in the same folder and run command: 
+2. Register the node for use by opening another terminal in the same folder and run command: 
 
    		java -jar selenium-server-standalone-2.40.0.jar -role node -hub http://localhost:4444/grid/register
    
