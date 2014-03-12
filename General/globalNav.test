@@ -1,0 +1,45 @@
+@@ set
+   branch      www. 
+   domain      ${branch}apple.com
+   pro         http://
+   base_url    ${pro}${domain}/
+   size        1080x900
+   grid        selenium grid http://127.0.0.1:5555/wd/hub
+   browser     safari
+   version     "7"
+
+Homepage gNav ${browser} ${version} |
+      ${grid} --page ${base_url} --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+        check globalNav.spec
+
+
+Mac Active Gradient
+     ${grid} --page ${base_url}mac --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       check macGradient.spec
+
+
+iPod Active Gradient
+     ${grid} --page ${base_url}ipod --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       check iPodGradient.spec
+
+ 
+iPhone Active Gradient
+     ${grid} --page ${base_url}iphone --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       check iPhoneGradient.spec
+
+   
+iPad Active Gradient
+     ${grid} --page ${base_url}ipad --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       check iPadGradient.spec
+
+    
+iTunes Active Gradient
+     ${grid} --page ${base_url}itunes --size ${size} --browser ${browser} --version ${version --platform "MAC"
+       check iTunesGradient.spec
+    
+#iOS Global Nav Test
+
+
+  
+
+     
