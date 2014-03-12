@@ -19,7 +19,7 @@ You can get chromedriver from https://code.google.com/p/chromedriver/
 1. Download and unzip the chromedriver somewhere easy to remember (like your home directory)
 2. Once unzipped open terminal and cd to where you unzipped the chromedriver and run this command:
 
-		sudo mv chromdriver /usr/bin
+		sudo mv chromedriver /usr/bin
     	enter your password for your machine when prompted
 
 To install galen framework:
@@ -42,10 +42,13 @@ To run a specific suite (.spec)
 		--htmlreport "reports"
 
 and hit return/enter
-	a. <name of specfile> is the name of the file you are running, for example globalNav.spec
-	b. url is the url to run against
-	c. htmlreport is userdefined meaning you can set it to whatever and it will create that folder, 
-		   leave it blank and it will generate reports in your main project folder.
+
+a. <name of specfile> is the name of the file you are running, for example globalNav.spec
+
+b. url is the url to run against
+
+c. htmlreport is userdefined meaning you can set it to whatever and it will create that folder, 
+   leave it blank and it will generate reports in your main project folder.
 		   
 To run a test suite
 
@@ -55,7 +58,9 @@ To run a test suite
 		galen test <name of testfile> --htmlreport "reports"
 	
 and hit return/enter
+
 a. <name of testfile> is the name of your test suite, for exmaple globalNav.test
+
 b. htmlreport is userdefined meaning you can set it to whatever and it will create that folder, 
    leave it blank and it will generate reports in your main project folder.
 		   
