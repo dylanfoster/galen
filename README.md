@@ -32,7 +32,8 @@ run this command:
 	
 	
 To run a specific suite (.spec)
-1. Open terminal and cd to where your project is (for me it's /Users/<username>/Documents/workspace/<name of project>    
+
+1. Open terminal and cd to where your project is (for me it's /Users/[username]/Documents/workspace/[name of project]    
 2. Run this command: 
 
 		galen check <name of specfile> \
@@ -47,7 +48,8 @@ and hit return/enter
 		   leave it blank and it will generate reports in your main project folder.
 		   
 To run a test suite
-1. Open terminal and cd to where your project is (for me it's /Users/<username>/Documents/workspace/<name of project>    
+
+1. Open terminal and cd to where your project is (for me it's /Users/[username]/Documents/workspace/[name of project]    
 2. Run this command: 
 
 		galen test <name of testfile> --htmlreport "reports"
