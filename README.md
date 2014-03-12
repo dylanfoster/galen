@@ -77,7 +77,8 @@ just open terminal and cd to where this is unzipped.
 
    		java -jar selenium-server-standalone-2.40.0.jar -role node -hub http://localhost:4444/grid/register
    
-Now you can use Selenium grid for testing.
+Now you can use Selenium grid for testing. *Note: you may need to changed the selenium-server-standalone-2.40.0.jar version (2.40.0 is current 
+as of 3/11/2013)
 
 For ease of use I have added all the files necessary for this to run out of the box. What you need to do is move chromedriver and galen to
 your PATH as I mentioned above. To start and register Selenium Grid I have added the start.sh and register.sh bash scripts. To run them open
