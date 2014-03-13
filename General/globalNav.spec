@@ -60,7 +60,7 @@ gNav-item-*
      
 gSearch
      width: ~ 132px
-     height: 35px
+     height: ~35px
      near: gNav 0 to 5px right
      
 

@@ -1,6 +1,6 @@
 @@ set
 
-   creds       dylan_foster:ADamwb!@12@
+   creds       <your open directory credenetials>
    branch      ic15. 
    domain      ${branch}apple.com
    pro         http://${creds}
