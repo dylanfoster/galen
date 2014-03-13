@@ -27,8 +27,7 @@ To install galen and chromedriver open terminal and cd to AppleLayoutTesting
 
 run command:
 
-	chmod +x install.sh
-	./install.sh
+	sudo ./install.sh
 	
 This will add the files to their correct location for you.
 
