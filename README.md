@@ -1,23 +1,57 @@
-Automated Layout Testing with Galen Framework
+<strong><p style="font-size:24px;">Automated Layout Testing with Galen Framework</p></strong>
 
 In an effort to reduce time on repeated testing, we are experimenting with automation on some of the elements that do not (or rarely) change.
 This includes Global Nav, Global Footer and Product Nav. We'll also be including basic checks for promos and other additions that are easy to judge
 in regard to layout.
 
-In order to use the galen framework there is some setup involved. All of these files are included here for easier install, just open terminal
-and cd to your Documents folder. 
+<strong>Linux/Unix based install</strong>
+
+Open terminal create a /test folder in your home drive and cd there
+	mkdir test
+	cd test
+
+You should be in /Users/[username]/test
 
 Run command:
 
     git init
     git clone https://interactive-git.apple.com/interactive-qa-fe/AppleLayoutTesting
+    cd AppleLayoutTesting
     git tag (this will show you the latest version)
-    git check -b (whatever the latest tag is)
+    git checkout -b (whatever the latest tag is)
     
 You should now have the latest version of AppleLayoutTesting
+ 
+To install galen and chromedriver open terminal and cd to AppleLayoutTesting
+
+run command:
+
+	chmod +x install.sh
+	./install.sh
+	
+This will add the files to their correct location for you.
+
+To start and register the selenium grid run start.sh and register.sh in separate windows. You should be able to do this by
+simply typing start.sh and register.sh respectively.
+
+As a shortcut I've added scripts to run the test for you.
+To run a particular test (iOS.test for example) 
+
+1. Open terminal and cd to it's location (~/test/AppleLayoutTesting/iOS)
+2. Run command:
+		./iOS.sh
+
+or for General Nav
+		./gNav.sh
+		
+		
+This will run the test automatically and generate the reports in the "reports" folder within that project folder (/iOS/reports")
 
 
-If you would like to install the necessary files your self the steps to follow are listed below.
+
+
+
+<strong><p style=font-size: 20px;">If you would like to install the necessary files yourself the steps to follow are listed below.</p></strong>
 
 Things you need: 
 
@@ -38,13 +72,16 @@ You can get chromedriver from https://code.google.com/p/chromedriver/
 To install galen framework:
 
 1. Download and unzip the galenframework from above to an easy to remember place (like inside your /workspace for eclipse)
-2. You'll need to add the galen binary to your PATH. To do this is the same as above. Open terminal and cd to where you unzipped galen.
-run this command: 
+2. You'll need to add the galen binary to your PATH. To do this you can run the following command in terminal
 
-		mv galen /usr/bin
-		enter your password when prompted.
+		echo "export PATH=$PATH:/location of galen folder" >> ~/.profile
+		
+		e.g. echo "export PATH=$PATH:~/test/AppleLayoutTesting/includes/galen-bin-0.9.0/" >> ~/.profile
+
+		
 	
-	
+<strong><p style="font-size:20px;">Running Galen</p></strong>
+
 To run a specific suite (.spec)
 
 1. Open terminal and cd to where your project is (for me it's /Users/[username]/Documents/workspace/[name of project]    
@@ -93,11 +130,6 @@ just open terminal and cd to where this is unzipped.
 Now you can use Selenium grid for testing. *Note: you may need to change the selenium-server-standalone-2.40.0.jar version (2.40.0 is current 
 as of 3/11/2013)
 
-For ease of use I have added all the files necessary for this to run out of the box. What you need to do is move chromedriver and galen to
-your PATH as I mentioned above. To start and register Selenium Grid I have added the start.sh and register.sh bash scripts. To run them open
-terminal and cd to where they are located. For each script make them executable by running: chmod +x start.sh (or register.sh) and hit Enter.
-After this you can run them by running command ./start.sh (or register.sh) in the folder they are located. You'll need to start and register
-in separate [terminal] windows.
 
 
 
@@ -106,6 +138,7 @@ in separate [terminal] windows.
 CHANGELOG
 
 Current Features: 
+
 	1. Tests Global Nav, Global Footer and Product Nav on all Flagship pages
 	2. iOS test for /ios page and promo call out (where applicable) including Global Nav, Footer and Product Nav
 	3. Can test against any ic branch on Firefox and Chrome by passing in your credentials
@@ -114,12 +147,15 @@ Current Features:
 	6. Shell scripts for starting and registering the Selenium grid
 	7. Shell scripts for starting the tests.
 	8. Element approximation range, full-page screenshot set (changes can be made in config file for each project. i.e. iOS, General etc)
+	
+	3/13/14
+	Added install.sh to install the necessary files for you (only mac/linux supported at the moment)
 
 
 
 Upcoming:
+
 	1. full ic branch support for Safari and IE
 	2. Additional pages to test.
-	3. Installer file
+	3. Installer file for Windows
 	4. Bug fixes
-
