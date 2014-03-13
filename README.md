@@ -106,20 +106,20 @@ in separate [terminal] windows.
 CHANGELOG
 
 Current Features: 
-1. Tests Global Nav, Global Footer and Product Nav on all Flagship pages
-2. iOS test for /ios page and promo call out (where applicable) including Global Nav, Footer and Product Nav
-3. Can test against any ic branch on Firefox and Chrome by passing in your credentials
-4. Can test against any size browser, protocol (http, https) and url by passing in their values in the .test file for the project
-5. Runs on Selenium Grid for cross browser support (only Chrome and Firefox currently supported for ic branches)
-6. Shell scripts for starting and registering the Selenium grid
-7. Shell scripts for starting the tests.
-8. Element approximation range, full-page screenshot set (changes can be made in config file for each project. i.e. iOS, General etc)
+	1. Tests Global Nav, Global Footer and Product Nav on all Flagship pages
+	2. iOS test for /ios page and promo call out (where applicable) including Global Nav, Footer and Product Nav
+	3. Can test against any ic branch on Firefox and Chrome by passing in your credentials
+	4. Can test against any size browser, protocol (http, https) and url by passing in their values in the .test file for the project
+	5. Runs on Selenium Grid for cross browser support (only Chrome and Firefox currently supported for ic branches)
+	6. Shell scripts for starting and registering the Selenium grid
+	7. Shell scripts for starting the tests.
+	8. Element approximation range, full-page screenshot set (changes can be made in config file for each project. i.e. iOS, General etc)
 
 
 
 Upcoming:
-1. full ic branch support for Safari and IE
-2. Additional pages to test.
-3. Installer file
-4. Bug fixes
+	1. full ic branch support for Safari and IE
+	2. Additional pages to test.
+	3. Installer file
+	4. Bug fixes
 
