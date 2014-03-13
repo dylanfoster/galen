@@ -4,7 +4,20 @@ In an effort to reduce time on repeated testing, we are experimenting with autom
 This includes Global Nav, Global Footer and Product Nav. We'll also be including basic checks for promos and other additions that are easy to judge
 in regard to layout.
 
-In order to use the galen framework there is some setup involved.
+In order to use the galen framework there is some setup involved. All of these files are included here for easier install, just open terminal
+and cd to your Documents folder. 
+
+Run command:
+
+    git init
+    git clone https://interactive-git.apple.com/interactive-qa-fe/AppleLayoutTesting
+    git tag (this will show you the latest version)
+    git check -b (whatever the latest tag is)
+    
+You should now have the latest version of AppleLayoutTesting
+
+
+If you would like to install the necessary files your self the steps to follow are listed below.
 
 Things you need: 
 
@@ -85,3 +98,27 @@ your PATH as I mentioned above. To start and register Selenium Grid I have added
 terminal and cd to where they are located. For each script make them executable by running: chmod +x start.sh (or register.sh) and hit Enter.
 After this you can run them by running command ./start.sh (or register.sh) in the folder they are located. You'll need to start and register
 in separate [terminal] windows.
+
+
+
+
+
+CHANGELOG
+
+Current Features: 
+1. Tests Global Nav, Global Footer and Product Nav on all Flagship pages
+2. iOS test for /ios page and promo call out (where applicable) including Global Nav, Footer and Product Nav
+3. Can test against any ic branch on Firefox and Chrome by passing in your credentials
+4. Can test against any size browser, protocol (http, https) and url by passing in their values in the .test file for the project
+5. Runs on Selenium Grid for cross browser support (only Chrome and Firefox currently supported for ic branches)
+6. Shell scripts for starting and registering the Selenium grid
+7. Shell scripts for starting the tests.
+8. Element approximation range, full-page screenshot set (changes can be made in config file for each project. i.e. iOS, General etc)
+
+
+
+Upcoming:
+1. full ic branch support for Safari and IE
+2. Additional pages to test.
+3. Installer file
+

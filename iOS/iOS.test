@@ -1,9 +1,9 @@
 @@ set
 
-   
-   branch      www. 
+   creds       username:password@
+   branch      ic15. 
    domain      ${branch}apple.com
-   pro         http://
+   pro         http://${creds}
    base_url    ${pro}${domain}/
    size        1024x900
    grid        selenium grid http://127.0.0.1:5555/wd/hub
@@ -12,7 +12,6 @@
  | browser  | version  |
  | chrome   |   33     |
  | firefox  |   27     |
- | safari   |   7      |
  
 @@ parameterized using browsers
 iOS Global Nav ${browser} ${version} 

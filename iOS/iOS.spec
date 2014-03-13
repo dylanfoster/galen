@@ -18,7 +18,6 @@ promo
      
 @@ otherwise
 
-@ Promo off | all
 hero
      above: design 0 to 10px
 @@ end
