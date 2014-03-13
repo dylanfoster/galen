@@ -5,7 +5,7 @@ promo             css   .update
 design            css   .row.design
 ==================================
 
-@all
+@ Promo on | all
 
 @@ if
 promo
@@ -17,6 +17,8 @@ promo
      near: design ~ 71px top
      
 @@ otherwise
+
+@ Promo off | all
 hero
      above: design 0 to 10px
 @@ end

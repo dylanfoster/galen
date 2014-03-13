@@ -1,43 +1,48 @@
 @@ set
-   branch      www. 
-   domain      ${branch}apple.com
-   pro         http://
-   base_url    ${pro}${domain}/
-   size        1080x900
-   grid        selenium grid http://127.0.0.1:5555/wd/hub
-   browser     safari
-   version     "7"
 
-Homepage gNav ${browser} ${version} |
+   creds       dylan_foster:ADamwb!@12@
+   branch      ic15. 
+   domain      ${branch}apple.com
+   pro         http://${creds}
+   base_url    ${pro}${domain}/
+   size        1024x900
+   grid        selenium grid http://127.0.0.1:5555/wd/hub
+   
+@@ table browsers
+ | browser  | version  |
+ | chrome   |   33     |
+ | firefox  |   27     |
+ 
+    
+@@ parameterized using browsers
+Homepage gNav ${browser} ${version}
       ${grid} --page ${base_url} --size ${size} --browser ${browser} --version ${version} --platform "MAC"
         check globalNav.spec
 
-
-Mac Active Gradient
+@@ parameterized using browsers
+Mac Active Gradient ${browser} ${version}
      ${grid} --page ${base_url}mac --size ${size} --browser ${browser} --version ${version} --platform "MAC"
        check macGradient.spec
 
-
-iPod Active Gradient
+@@ parameterized using browsers
+iPod Active Gradient ${browser} ${version}
      ${grid} --page ${base_url}ipod --size ${size} --browser ${browser} --version ${version} --platform "MAC"
        check iPodGradient.spec
 
- 
-iPhone Active Gradient
+@@ parameterized using browsers
+iPhone Active Gradient ${browser} ${version}
      ${grid} --page ${base_url}iphone --size ${size} --browser ${browser} --version ${version} --platform "MAC"
        check iPhoneGradient.spec
 
-   
-iPad Active Gradient
+@@ parameterized using browsers   
+iPad Active Gradient ${browser} ${version}
      ${grid} --page ${base_url}ipad --size ${size} --browser ${browser} --version ${version} --platform "MAC"
        check iPadGradient.spec
 
-    
-iTunes Active Gradient
+@@ parameterized using browsers  
+iTunes Active Gradient ${browser} ${version}
      ${grid} --page ${base_url}itunes --size ${size} --browser ${browser} --version ${version --platform "MAC"
        check iTunesGradient.spec
-    
-#iOS Global Nav Test
 
 
   

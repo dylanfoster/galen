@@ -1,25 +1,35 @@
 @@ set
+
+   
    branch      www. 
    domain      ${branch}apple.com
    pro         http://
    base_url    ${pro}${domain}/
-   size        1080x900
+   size        1024x900
    grid        selenium grid http://127.0.0.1:5555/wd/hub
-   browser     Chrome
-   version     "33"
-
+   
+@@ table browsers
+ | browser  | version  |
+ | chrome   |   33     |
+ | firefox  |   27     |
+ | safari   |   7      |
+ 
+@@ parameterized using browsers
 iOS Global Nav ${browser} ${version} 
       ${grid} --page ${base_url}ios --size ${size} --browser ${browser} --version ${version} --platform "MAC"
         check globalNav.spec
 
+@@ parameterized using browsers
 iOS Global Footer ${browser} ${version} 
       ${grid} --page ${base_url}ios --size ${size} --browser ${browser} --version ${version} --platform "MAC"
         check globalFooter.spec
-        
+
+@@ parameterized using browsers     
 iOS Local Nav ${browser} ${version} 
       ${grid} --page ${base_url}ios --size ${size} --browser ${browser} --version ${version} --platform "MAC"
         check productNav.spec
-        
+
+@@ parameterized using browsers       
 iOS Main Page ${browser} ${version} 
       ${grid} --page ${base_url}ios --size ${size} --browser ${browser} --version ${version} --platform "MAC"
         check iOS.spec
