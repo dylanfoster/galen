@@ -121,4 +121,5 @@ Upcoming:
 1. full ic branch support for Safari and IE
 2. Additional pages to test.
 3. Installer file
+4. Bug fixes
 
