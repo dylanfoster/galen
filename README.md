@@ -19,6 +19,7 @@ Run command:
     cd AppleLayoutTesting
     git tag (this will show you the latest version)
     git checkout -b (whatever the latest tag is)
+    	*note: if you already have a clone, run git fetch --tags to get the latest tags
     
 You should now have the latest version of AppleLayoutTesting
  
