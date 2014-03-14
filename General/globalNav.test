@@ -1,7 +1,7 @@
 @@ set
 
-   creds       username:password@
-   branch      ic15. 
+   #creds       username:password@
+   branch      www.
    domain      ${branch}apple.com
    pro         http://${creds}
    base_url    ${pro}${domain}/
@@ -9,19 +9,20 @@
    grid        selenium grid http://127.0.0.1:5555/wd/hub
    
 @@ table browsers
- | browser  | version  |
- | chrome   |   33     |
- | firefox  |   27     |
+ | browser   | version  |
+ | chrome    |   33     |
+ | firefox   |   27     |
+ | safari    |    7     |
  
     
 @@ parameterized using browsers
 Homepage Global Nav ${browser} ${version} ${size} |
-     ${grid} --page ${base_url} --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+     ${grid} --page ${base_url} --browser ${browser} --version ${version} --platform "MAC"
         check globalNav.spec
 
 @@ parameterized using browsers
 Mac Active Gradient ${browser} ${version} ${size} |
-     ${grid} --page ${base_url}mac --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+     ${grid} --page ${base_url}mac --browser ${browser} --version ${version} --platform "MAC"
        check macGradient.spec
 
 @@ parameterized using browsers
