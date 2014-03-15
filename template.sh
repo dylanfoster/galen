@@ -46,7 +46,7 @@ object definitions
 spec definitions" > $spec.spec
 
 echo "#!/bin/bash
-galen test <testfile>.test --htmlreport \"reports\"
+galen test $test.test --htmlreport \"reports\"
 cd reports
 shopt -s extglob
 now=\$(date +'%m%d%y_%H:%M')
