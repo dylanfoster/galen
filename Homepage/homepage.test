@@ -1,0 +1,37 @@
+@@ set
+
+   #creds       username:password@
+   branch      www.
+   domain      ${branch}apple.com
+   pro         http://${creds}
+   base_url    ${pro}${domain}/
+   grid        selenium grid http://127.0.0.1:5555/wd/hub
+   
+@@ table browsers
+ | browser   | version  |
+ | chrome    |   33     |
+ | firefox   |   27     |
+ | safari    |    7     |
+ 
+    
+@@ parameterized using browsers
+Homepage tiles ${browser} ${version} 1024x768 |
+     ${grid} --page ${base_url} --size 1024x768 --browser ${browser} --version ${version} --platform "MAC"
+        check homepage_1024.spec
+        
+@@ parameterized using browsers
+Homepage tiles ${browser} ${version} 1152x870 |
+     ${grid} --page ${base_url} --size 1152x870 --browser ${browser} --version ${version} --platform "MAC"
+        check homepage_1152.spec
+        
+@@ parameterized using browsers
+Homepage tiles ${browser} ${version} 1280x960 |
+     ${grid} --page ${base_url} --size 1280x960 --browser ${browser} --version ${version} --platform "MAC"
+        check homepage_1280.spec
+        
+@@ parameterized using browsers
+Homepage tiles ${browser} ${version} 1600x1200 |
+     ${grid} --page ${base_url} --size 1600x1200 --browser ${browser} --version ${version} --platform "MAC"
+        check homepage_1600.spec
+        
+        
