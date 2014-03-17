@@ -23,26 +23,31 @@ Homepage Global Nav ${browser} ${version} ${size} |
 @@ parameterized using browsers
 Mac Active Gradient ${browser} ${version} ${size} |
      ${grid} --page ${base_url}mac --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       run wait.js
        check macGradient.spec
 
 @@ parameterized using browsers
 iPod Active Gradient ${browser} ${version} ${size} |
      ${grid} --page ${base_url}ipod --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       run wait.js
        check iPodGradient.spec
 
 @@ parameterized using browsers
 iPhone Active Gradient ${browser} ${version} ${size} |
      ${grid} --page ${base_url}iphone --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       run wait.js
        check iPhoneGradient.spec
 
 @@ parameterized using browsers   
 iPad Active Gradient ${browser} ${version} ${size} |
      ${grid} --page ${base_url}ipad --size ${size} --browser ${browser} --version ${version} --platform "MAC"
+       run wait.js
        check iPadGradient.spec
 
 @@ parameterized using browsers  
 iTunes Active Gradient ${browser} ${version} ${size} |
      ${grid} --page ${base_url}itunes --size ${size} --browser ${browser} --version ${version --platform "MAC"
+       run wait.js
        check iTunesGradient.spec
 
 
