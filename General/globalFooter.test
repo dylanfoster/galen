@@ -1,6 +1,0 @@
-@@ set
-   branch      www. 
-   domain      ${branch}apple.com
-   pro         http://
-   base_url    ${pro}${domain}/
-   size        1080x900

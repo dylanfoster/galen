@@ -8,7 +8,7 @@ echo "@@ set
 
    #creds       username:password@
    branch      www.
-   domain      \${branch}apple.com
+   domain      \${branch}url to test
    pro         http://\${creds}
    base_url    \${pro}\${domain}/
    size        1024x900
@@ -23,6 +23,7 @@ echo "@@ set
 @@ parameterized using browsers
 <give this an appropriate test title> \${browser} \${version} \${size} |
      \${grid} --page \${base_url} --browser \${browser} --version \${version} --platform \"MAC\"
+         .spec file to test
 
 repeat above as needed" > $test.test
 

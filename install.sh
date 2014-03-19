@@ -5,8 +5,8 @@ echo "Adding Galen and Chromedriver to your PATH
 ..
 .."
 
-echo "export PATH=$PATH:~/test/AppleLayoutTesting/includes/selenium-2.40.0/:~/test/AppleLayoutTesting/includes/galen-bin-0.9.0/:~/test/AppleLayoutTesting" >> ~/.profile
-mv ~/test/AppleLayoutTesting/includes/chromedriver /usr/bin/
+echo "export PATH=$PATH:~/test/galen/includes/selenium-2.40.0/:~/test/galen/includes/galen-bin-0.9.0/:~/test/galen" >> ~/.profile
+mv ~/test/galen/includes/chromedriver /usr/bin/
 . ~/.profile
 
 echo "...Done"
